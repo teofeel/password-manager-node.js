@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <title><%=username%> | Password Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Welcome <%=username%></h1>
+
+    <a href="/">Logout</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Account</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(acc of accounts){  %>
+                <tr>
+                    <td><%= acc.name%></td>
+                    <td><%= acc.username%></td>
+                    <td><%= acc.password%></td>
+                    <td><a href="/change/<%=acc.id%>">Change</a></td>
+                    <td><a href="/delete/<%=acc.id%>">Delete</a></td>
+                </tr>
+            <%} %>
+        </tbody>
+    </table>
+    <br>
+
+    <a href='/new_account'>Add new account</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <title><%=username%> | Password Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <a href="/">Logout</a>
+    <a href="/user/<%=username%>">Go back</a>
+    
+    <div class="new-form" >
+
+        <form class="forma" action="/new-account" method="post">
+            <h4>Account</h4>
+            <input type = "text" name="name" required>
+            <h4>Username</h4>
+            <input type = "text" name = "username" required>
+            <h4>Password</h4>
+            <input type="text" name = "password" required>
+            <br>
+            <input type="submit">
+        </form>
+
+    </div>
+
+</body>
+</html>
